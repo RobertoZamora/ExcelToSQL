@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane prefHeight="193.0" prefWidth="374.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controller.ConfiguracionCamposController">
+   <center>
+      <VBox prefHeight="341.0" prefWidth="343.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label text="Inserte el nombre de la columna y el tipo de dato." VBox.vgrow="ALWAYS">
+               <VBox.margin>
+                  <Insets bottom="2.5" left="2.5" right="2.5" top="2.5" />
+               </VBox.margin>
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <JFXTextField fx:id="campo" maxWidth="1.7976931348623157E308" prefHeight="25.0" prefWidth="406.0" VBox.vgrow="ALWAYS">
+               <VBox.margin>
+                  <Insets bottom="10.0" left="2.5" right="2.5" top="2.5" />
+               </VBox.margin>
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </JFXTextField>
+            <JFXComboBox fx:id="tipo" prefHeight="25.0" prefWidth="374.0" VBox.vgrow="ALWAYS">
+               <VBox.margin>
+                  <Insets bottom="10.0" left="2.5" right="2.5" top="10.0" />
+               </VBox.margin>
+            </JFXComboBox>
+            <HBox alignment="CENTER_RIGHT" prefHeight="89.0" prefWidth="374.0" VBox.vgrow="ALWAYS">
+               <children>
+                  <JFXButton fx:id="aceptar" buttonType="RAISED" contentDisplay="GRAPHIC_ONLY" onMouseClicked="#aceptar" prefHeight="40.0" prefWidth="40.0" style="-fx-border-color: #000000; -fx-border-radius: 5; -fx-background-radius: 5;" HBox.hgrow="ALWAYS">
+                     <graphic>
+                        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../recursos/img/correctC32.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <HBox.margin>
+                        <Insets bottom="2.5" left="2.5" right="2.5" top="2.5" />
+                     </HBox.margin>
+                  </JFXButton>
+                  <JFXButton fx:id="cancelar" buttonType="RAISED" contentDisplay="GRAPHIC_ONLY" onMouseClicked="#cancelar" prefHeight="40.0" prefWidth="40.0" style="-fx-border-color: #000000; -fx-border-radius: 5; -fx-background-radius: 5;" HBox.hgrow="ALWAYS">
+                     <graphic>
+                        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../recursos/img/cancelC32.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <HBox.margin>
+                        <Insets bottom="2.5" left="2.5" right="2.5" top="2.5" />
+                     </HBox.margin>
+                  </JFXButton>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </center>
+</BorderPane>

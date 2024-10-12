@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+
+<BorderPane prefHeight="239.0" prefWidth="570.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.171" fx:controller="application.controller.SimplificadaController">
+   <center>
+      <VBox prefHeight="282.0" prefWidth="554.0" BorderPane.alignment="CENTER">
+         <children>
+            <VBox prefHeight="200.0" prefWidth="100.0">
+               <children>
+                  <Label prefHeight="21.0" prefWidth="192.0" text="Nombre Campo Excel">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets bottom="2.5" left="2.5" right="2.5" top="2.5" />
+                     </VBox.margin>
+                  </Label>
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+                     <children>
+                        <JFXTextField fx:id="colSimple" HBox.hgrow="ALWAYS">
+                           <HBox.margin>
+                              <Insets bottom="2.5" left="2.5" right="2.5" top="2.5" />
+                           </HBox.margin>
+                        </JFXTextField>
+                     </children>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                     <padding>
+                        <Insets bottom="2.5" left="2.5" right="2.5" top="2.5" />
+                     </padding>
+                  </HBox>
+               </children>
+               <padding>
+                  <Insets bottom="2.5" left="2.5" right="2.5" top="2.5" />
+               </padding>
+            </VBox>
+            <VBox prefHeight="200.0" prefWidth="100.0">
+               <children>
+                  <Label prefHeight="21.0" prefWidth="192.0" text="Columnas en B.B.D.D.">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets bottom="2.5" left="2.5" right="2.5" top="2.5" />
+                     </VBox.margin>
+                  </Label>
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+                     <children>
+                        <JFXComboBox fx:id="comboColBBDD" prefWidth="300.0" HBox.hgrow="ALWAYS">
+                           <HBox.margin>
+                              <Insets bottom="2.5" left="2.5" right="2.5" top="2.5" />
+                           </HBox.margin>
+                        </JFXComboBox>
+                        <JFXButton fx:id="addColBBDD" buttonType="RAISED" contentDisplay="GRAPHIC_ONLY" onMouseClicked="#agnadirColuBBDD" prefHeight="40.0" prefWidth="40.0" style="-fx-border-color: #000000; -fx-border-radius: 5; -fx-background-radius: 5;" HBox.hgrow="ALWAYS">
+                           <graphic>
+                              <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../recursos/img/addC32.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <HBox.margin>
+                              <Insets bottom="2.5" left="2.5" right="2.5" top="2.5" />
+                           </HBox.margin>
+                        </JFXButton>
+                        <JFXButton fx:id="delColBBDD" buttonType="RAISED" contentDisplay="GRAPHIC_ONLY" onMouseClicked="#borrarColBBDD" prefHeight="40.0" prefWidth="40.0" style="-fx-border-color: #000000; -fx-border-radius: 5; -fx-background-radius: 5;" HBox.hgrow="ALWAYS">
+                           <graphic>
+                              <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../recursos/img/thrasC32.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <HBox.margin>
+                              <Insets bottom="2.5" left="2.5" right="2.5" top="2.5" />
+                           </HBox.margin>
+                        </JFXButton>
+                     </children>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                     <padding>
+                        <Insets bottom="2.5" left="2.5" right="2.5" top="2.5" />
+                     </padding>
+                  </HBox>
+               </children>
+            </VBox>
+            <HBox alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <JFXButton fx:id="guardar" buttonType="RAISED" contentDisplay="GRAPHIC_ONLY" onMouseClicked="#guardar" prefHeight="40.0" prefWidth="40.0" style="-fx-border-color: #000000; -fx-border-radius: 5; -fx-background-radius: 5;" HBox.hgrow="ALWAYS">
+                     <graphic>
+                        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../recursos/img/saveC32.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <HBox.margin>
+                        <Insets bottom="2.5" left="2.5" right="2.5" top="2.5" />
+                     </HBox.margin>
+                  </JFXButton>
+                  <JFXButton fx:id="cancelar" buttonType="RAISED" contentDisplay="GRAPHIC_ONLY" onMouseClicked="#cancelar" prefHeight="40.0" prefWidth="40.0" style="-fx-border-color: #000000; -fx-border-radius: 5; -fx-background-radius: 5;" HBox.hgrow="ALWAYS">
+                     <graphic>
+                        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../recursos/img/cancelC32.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <HBox.margin>
+                        <Insets bottom="2.5" left="2.5" right="2.5" top="2.5" />
+                     </HBox.margin>
+                  </JFXButton>
+               </children>
+               <padding>
+                  <Insets bottom="2.5" left="2.5" right="2.5" top="2.5" />
+               </padding>
+            </HBox>
+         </children>
+      </VBox>
+   </center>
+</BorderPane>

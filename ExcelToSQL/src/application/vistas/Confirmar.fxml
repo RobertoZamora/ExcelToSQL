@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane prefHeight="169.0" prefWidth="361.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controller.ConfirmarController">
+   <center>
+      <HBox prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <VBox alignment="CENTER" prefHeight="169.0" prefWidth="128.0">
+               <children>
+                  <ImageView fitHeight="90.0" fitWidth="90.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../recursos/img/aviso64.png" />
+                     </image>
+                  </ImageView>
+               </children>
+               <padding>
+                  <Insets bottom="2.5" left="2.5" right="2.5" top="2.5" />
+               </padding></VBox>
+            <VBox alignment="CENTER" prefHeight="169.0" prefWidth="299.0">
+               <children>
+                  <Label fx:id="mensaje" prefHeight="73.0" prefWidth="266.0" text="¿Se va a eliminar la configuracion config estas seguro?" textOverrun="CLIP" wrapText="true" />
+                  <HBox alignment="BOTTOM_CENTER" prefHeight="157.0" prefWidth="266.0">
+                     <children>
+                        <JFXButton fx:id="aceptar" contentDisplay="GRAPHIC_ONLY" onMouseClicked="#aceptar" prefHeight="40.0" prefWidth="40.0" style="-fx-border-color: #000000; -fx-border-radius: 5; -fx-background-radius: 5;">
+                           <HBox.margin>
+                              <Insets bottom="2.5" left="2.5" right="2.5" top="2.5" />
+                           </HBox.margin>
+                           <graphic>
+                              <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../recursos/img/correctC32.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </JFXButton>
+                        <JFXButton fx:id="cancelar" contentDisplay="GRAPHIC_ONLY" onMouseClicked="#cancelar" prefHeight="40.0" prefWidth="40.0" style="-fx-border-color: #000000; -fx-border-radius: 5; -fx-background-radius: 5;">
+                           <HBox.margin>
+                              <Insets bottom="2.5" left="2.5" right="2.5" top="2.5" />
+                           </HBox.margin>
+                           <graphic>
+                              <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../recursos/img/cancelC32.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </JFXButton>
+                     </children></HBox>
+               </children>
+               <padding>
+                  <Insets bottom="2.5" left="2.5" right="2.5" top="2.5" />
+               </padding>
+            </VBox>
+         </children>
+      </HBox>
+   </center>
+</BorderPane>

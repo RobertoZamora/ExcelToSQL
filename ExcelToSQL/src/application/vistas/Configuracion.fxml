@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane prefHeight="382.0" prefWidth="570.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controller.ConfiguracionController">
+   <center>
+      <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <VBox alignment="CENTER" prefHeight="89.0" prefWidth="597.0">
+                     <children>
+                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                           <children>
+                              <Label alignment="CENTER" contentDisplay="CENTER" prefWidth="200.0" text="Color Seleccion Modificar" textAlignment="CENTER">
+                                 <HBox.margin>
+                                    <Insets bottom="2.5" left="2.5" right="2.5" top="2.5" />
+                                 </HBox.margin>
+                                 <font>
+                                    <Font name="System Bold" size="15.0" />
+                                 </font>
+                              </Label>
+                              <Label alignment="CENTER" contentDisplay="CENTER" prefWidth="200.0" text="Color Seleccion Bloqueos" textAlignment="CENTER">
+                                 <HBox.margin>
+                                    <Insets bottom="2.5" left="2.5" right="2.5" top="2.5" />
+                                 </HBox.margin>
+                                 <font>
+                                    <Font name="System Bold" size="15.0" />
+                                 </font>
+                              </Label>
+                              <Label alignment="CENTER" contentDisplay="CENTER" prefWidth="200.0" text="Color Seleccion Ignorar" textAlignment="CENTER">
+                                 <HBox.margin>
+                                    <Insets bottom="2.5" left="2.5" right="2.5" top="2.5" />
+                                 </HBox.margin>
+                                 <font>
+                                    <Font name="System Bold" size="15.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                           <children>
+                              <JFXButton fx:id="seleccion" buttonType="RAISED" contentDisplay="GRAPHIC_ONLY" onMouseClicked="#elegirSeleccion" prefHeight="40.0" prefWidth="200.0" ripplerFill="#ffffff00" style="-fx-border-color: #000000; -fx-border-radius: 5; -fx-background-radius: 5;">
+                                 <HBox.margin>
+                                    <Insets bottom="2.5" left="2.5" right="2.5" top="2.5" />
+                                 </HBox.margin>
+                              </JFXButton>
+                              <JFXButton fx:id="bloqueos" buttonType="RAISED" contentDisplay="GRAPHIC_ONLY" onMouseClicked="#elegirBloqueos" prefHeight="40.0" prefWidth="200.0" ripplerFill="#ffffff00" style="-fx-border-color: #000000; -fx-border-radius: 5; -fx-background-radius: 5;">
+                                 <HBox.margin>
+                                    <Insets bottom="2.5" left="2.5" right="2.5" top="2.5" />
+                                 </HBox.margin>
+                              </JFXButton>
+                              <JFXButton fx:id="ignorar" buttonType="RAISED" contentDisplay="GRAPHIC_ONLY" onMouseClicked="#elegirIgnorar" prefHeight="40.0" prefWidth="200.0" ripplerFill="#ffffff00" style="-fx-border-color: #000000; -fx-border-radius: 5; -fx-background-radius: 5;">
+                                 <HBox.margin>
+                                    <Insets bottom="2.5" left="2.5" right="2.5" top="2.5" />
+                                 </HBox.margin>
+                              </JFXButton>
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+               </children>
+               <padding>
+                  <Insets bottom="2.5" left="2.5" right="2.5" top="2.5" />
+               </padding>
+            </HBox>
+            <HBox layoutX="10.0" layoutY="10.0" prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <VBox alignment="CENTER" prefHeight="95.0" prefWidth="575.0" HBox.hgrow="ALWAYS">
+                     <children>
+                        <HBox alignment="BOTTOM_LEFT" prefHeight="100.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+                           <children>
+                              <Label text="Configuracion Hojas:" HBox.hgrow="ALWAYS">
+                                 <HBox.margin>
+                                    <Insets bottom="2.5" left="2.5" right="2.5" top="2.5" />
+                                 </HBox.margin>
+                                 <font>
+                                    <Font name="System Bold" size="15.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+                           <children>
+                              <JFXComboBox fx:id="hojas" maxWidth="Infinity" onAction="#cambioCampos" HBox.hgrow="ALWAYS">
+                                 <HBox.margin>
+                                    <Insets bottom="2.5" left="2.5" right="2.5" top="2.5" />
+                                 </HBox.margin></JFXComboBox>
+                              <JFXButton fx:id="addHoja" buttonType="RAISED" contentDisplay="GRAPHIC_ONLY" onMouseClicked="#agnadirHoja" prefHeight="40.0" prefWidth="40.0" style="-fx-border-color: #000000; -fx-border-radius: 5; -fx-background-radius: 5;" HBox.hgrow="ALWAYS">
+                                 <HBox.margin>
+                                    <Insets bottom="2.5" left="2.5" right="2.5" top="2.5" />
+                                 </HBox.margin>
+                                 <graphic>
+                                    <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../recursos/img/addC32.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </JFXButton>
+                              <JFXButton fx:id="confHoja" contentDisplay="GRAPHIC_ONLY" layoutX="66.0" layoutY="10.0" onMouseClicked="#configurarHoja" prefHeight="40.0" prefWidth="40.0" style="-fx-border-color: #000000; -fx-border-radius: 5; -fx-background-radius: 5;" HBox.hgrow="ALWAYS">
+                                 <HBox.margin>
+                                    <Insets bottom="2.5" left="2.5" right="2.5" top="2.5" />
+                                 </HBox.margin>
+                                 <graphic>
+                                    <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../recursos/img/configC32.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </JFXButton>
+                              <JFXButton fx:id="delHoja" contentDisplay="GRAPHIC_ONLY" layoutX="118.0" layoutY="10.0" onMouseClicked="#eliminarHoja" prefHeight="40.0" prefWidth="40.0" style="-fx-border-color: #000000; -fx-border-radius: 5; -fx-background-radius: 5;" HBox.hgrow="ALWAYS">
+                                 <HBox.margin>
+                                    <Insets bottom="2.5" left="2.5" right="2.5" top="2.5" />
+                                 </HBox.margin>
+                                 <graphic>
+                                    <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../recursos/img/thrasC32.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </JFXButton>
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+               </children>
+               <padding>
+                  <Insets bottom="2.5" left="2.5" right="2.5" top="2.5" />
+               </padding>
+            </HBox>
+            <HBox layoutX="10.0" layoutY="10.0" prefHeight="100.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+               <children>
+                  <VBox prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
+                     <children>
+                        <HBox alignment="BOTTOM_LEFT" prefHeight="100.0" prefWidth="200.0">
+                           <children>
+                              <Label text="Configuracion Campos:" HBox.hgrow="ALWAYS">
+                                 <HBox.margin>
+                                    <Insets bottom="2.5" left="2.5" right="2.5" top="2.5" />
+                                 </HBox.margin>
+                                 <font>
+                                    <Font name="System Bold" size="15.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                           <children>
+                              <JFXComboBox fx:id="campos" maxWidth="Infinity" HBox.hgrow="ALWAYS">
+                                 <HBox.margin>
+                                    <Insets bottom="2.5" left="2.5" right="2.5" top="2.5" />
+                                 </HBox.margin>
+                              </JFXComboBox>
+                              <JFXButton fx:id="addCampo" buttonType="RAISED" contentDisplay="GRAPHIC_ONLY" onMouseClicked="#agnadirCampo" prefHeight="40.0" prefWidth="40.0" style="-fx-border-color: #000000; -fx-border-radius: 5; -fx-background-radius: 5;" HBox.hgrow="ALWAYS">
+                                 <HBox.margin>
+                                    <Insets bottom="2.5" left="2.5" right="2.5" top="2.5" />
+                                 </HBox.margin>
+                                 <graphic>
+                                    <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../recursos/img/addC32.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </JFXButton>
+                              <JFXButton fx:id="confCampo" contentDisplay="GRAPHIC_ONLY" layoutX="66.0" layoutY="10.0" onMouseClicked="#configurarCampo" prefHeight="40.0" prefWidth="40.0" style="-fx-border-color: #000000; -fx-border-radius: 5; -fx-background-radius: 5;" HBox.hgrow="ALWAYS">
+                                 <HBox.margin>
+                                    <Insets bottom="2.5" left="2.5" right="2.5" top="2.5" />
+                                 </HBox.margin>
+                                 <graphic>
+                                    <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../recursos/img/configC32.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </JFXButton>
+                              <JFXButton fx:id="delCampo" contentDisplay="GRAPHIC_ONLY" layoutX="118.0" layoutY="10.0" onMouseClicked="#eliminarCampo" prefHeight="40.0" prefWidth="40.0" style="-fx-border-color: #000000; -fx-border-radius: 5; -fx-background-radius: 5;" HBox.hgrow="ALWAYS">
+                                 <HBox.margin>
+                                    <Insets bottom="2.5" left="2.5" right="2.5" top="2.5" />
+                                 </HBox.margin>
+                                 <graphic>
+                                    <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../recursos/img/thrasC32.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </JFXButton>
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+               </children></HBox>
+            <HBox alignment="CENTER_RIGHT" layoutX="10.0" layoutY="110.0" prefHeight="17.0" prefWidth="570.0" VBox.vgrow="ALWAYS">
+               <children>
+                  <JFXButton fx:id="reset" buttonType="RAISED" contentDisplay="GRAPHIC_ONLY" onMouseClicked="#resetearConfiguracion" prefHeight="40.0" prefWidth="40.0" style="-fx-border-color: #000000; -fx-border-radius: 5; -fx-background-radius: 5;">
+                     <graphic>
+                        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../recursos/img/resetC32.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </JFXButton>
+               </children>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+               <padding>
+                  <Insets bottom="2.5" left="2.5" right="2.5" top="2.5" />
+               </padding></HBox>
+         </children>
+      </VBox>
+   </center>
+</BorderPane>

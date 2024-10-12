@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane prefHeight="200.0" prefWidth="278.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controller.PrincipalController">
+   <center>
+      <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <JFXComboBox fx:id="comboConfig" prefHeight="25.0" prefWidth="280.0">
+                     <HBox.margin>
+                        <Insets bottom="2.5" left="2.5" right="2.5" top="2.5" />
+                     </HBox.margin>
+                  </JFXComboBox>
+                  <JFXButton fx:id="nuevaConfiguracion" buttonType="RAISED" contentDisplay="GRAPHIC_ONLY" onMouseClicked="#crearConfiguracion" prefHeight="40.0" prefWidth="40.0" style="-fx-border-color: #000000; -fx-border-radius: 5; -fx-background-radius: 5;">
+                     <HBox.margin>
+                        <Insets bottom="2.5" left="2.5" right="2.5" top="2.5" />
+                     </HBox.margin>
+                     <graphic>
+                        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../recursos/img/file.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton fx:id="borrarConfiguracion" buttonType="RAISED" contentDisplay="GRAPHIC_ONLY" layoutX="66.0" layoutY="10.0" onMouseClicked="#borrarConfiguracion" prefHeight="40.0" prefWidth="40.0" style="-fx-border-color: #000000; -fx-border-radius: 5; -fx-background-radius: 5;">
+                     <HBox.margin>
+                        <Insets bottom="2.5" left="2.5" right="2.5" top="2.5" />
+                     </HBox.margin>
+                     <graphic>
+                        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../recursos/img/cerrar.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </JFXButton>
+               </children></HBox>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <JFXTextField fx:id="archivoExcel" disable="true" prefHeight="25.0" prefWidth="360.0" />
+               </children>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+               <padding>
+                  <Insets bottom="2.5" left="2.5" right="2.5" top="2.5" />
+               </padding>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <JFXButton fx:id="excel" buttonType="RAISED" contentDisplay="GRAPHIC_ONLY" onMouseClicked="#buscarExcel" prefHeight="200.0" prefWidth="200.0" style="-fx-border-color: #000000; -fx-border-radius: 15; -fx-background-radius: 15;">
+                     <HBox.margin>
+                        <Insets bottom="2.5" left="2.5" right="2.5" top="2.5" />
+                     </HBox.margin>
+                     <graphic>
+                        <ImageView fitHeight="95.0" fitWidth="95.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../recursos/img/excelC64.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton fx:id="configurar" buttonType="RAISED" contentDisplay="GRAPHIC_ONLY" onMouseClicked="#abrirConfiguracion" prefHeight="200.0" prefWidth="200.0" style="-fx-border-color: #000000; -fx-border-radius: 15; -fx-background-radius: 15;">
+                     <HBox.margin>
+                        <Insets bottom="2.5" left="2.5" right="2.5" top="2.5" />
+                     </HBox.margin>
+                     <graphic>
+                        <ImageView fitHeight="95.0" fitWidth="95.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../recursos/img/configC64.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton fx:id="ejecutar" buttonType="RAISED" contentDisplay="GRAPHIC_ONLY" onMouseClicked="#generarSql" prefHeight="200.0" prefWidth="200.0" style="-fx-border-color: #000000; -fx-border-radius: 15; -fx-background-radius: 15;">
+                     <HBox.margin>
+                        <Insets bottom="2.5" left="2.5" right="2.5" top="2.5" />
+                     </HBox.margin>
+                     <graphic>
+                        <ImageView fitHeight="95.0" fitWidth="95.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../recursos/img/ejecutarC64.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </JFXButton>
+               </children>
+               <padding>
+                  <Insets bottom="2.5" left="2.5" right="2.5" top="2.5" />
+               </padding>
+            </HBox>
+         </children>
+      </VBox>
+   </center>
+</BorderPane>

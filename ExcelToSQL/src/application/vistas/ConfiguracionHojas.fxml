@@ -1,0 +1,602 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXCheckBox?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane prefHeight="612.0" prefWidth="551.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controller.ConfiguracionHojasController">
+   <center>
+      <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Label prefHeight="21.0" prefWidth="209.0" text="Nombre Pestaña" HBox.hgrow="ALWAYS">
+                     <HBox.margin>
+                        <Insets bottom="2.5" left="2.5" right="2.5" top="2.5" />
+                     </HBox.margin>
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Label>
+                  <ImageView fx:id="ToolTipPestagna" fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true" HBox.hgrow="ALWAYS">
+                     <image>
+                        <Image url="@../../recursos/img/iC32.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets bottom="2.5" left="2.5" right="2.5" top="2.5" />
+                     </HBox.margin>
+                  </ImageView>
+                  <JFXTextField fx:id="nombrePestagna" prefHeight="25.0" prefWidth="334.0" HBox.hgrow="ALWAYS">
+                     <HBox.margin>
+                        <Insets bottom="2.5" left="2.5" right="2.5" top="2.5" />
+                     </HBox.margin>
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </JFXTextField>
+               </children>
+               <VBox.margin>
+                  <Insets bottom="2.5" left="2.5" right="2.5" top="2.5" />
+               </VBox.margin>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" layoutX="13.0" layoutY="13.0" prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Label prefHeight="21.0" prefWidth="209.0" text="Nombre Tabla" HBox.hgrow="ALWAYS">
+                     <HBox.margin>
+                        <Insets bottom="2.5" left="2.5" right="2.5" top="2.5" />
+                     </HBox.margin>
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Label>
+                  <ImageView fx:id="ToolTipTabla" fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true" HBox.hgrow="ALWAYS">
+                     <image>
+                        <Image url="@../../recursos/img/iC32.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets bottom="2.5" left="2.5" right="2.5" top="2.5" />
+                     </HBox.margin>
+                  </ImageView>
+                  <JFXTextField fx:id="nombreTabla" prefHeight="25.0" prefWidth="334.0" HBox.hgrow="ALWAYS">
+                     <HBox.margin>
+                        <Insets bottom="2.5" left="2.5" right="2.5" top="2.5" />
+                     </HBox.margin>
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </JFXTextField>
+               </children>
+               <VBox.margin>
+                  <Insets bottom="2.5" left="2.5" right="2.5" top="2.5" />
+               </VBox.margin>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" layoutX="13.0" layoutY="13.0" prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Label prefHeight="21.0" prefWidth="209.0" text="Fila de columnas" HBox.hgrow="ALWAYS">
+                     <HBox.margin>
+                        <Insets bottom="2.5" left="2.5" right="2.5" top="2.5" />
+                     </HBox.margin>
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Label>
+                  <ImageView fx:id="ToolTipColumnas" fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true" HBox.hgrow="ALWAYS">
+                     <image>
+                        <Image url="@../../recursos/img/iC32.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets bottom="2.5" left="2.5" right="2.5" top="2.5" />
+                     </HBox.margin>
+                  </ImageView>
+                  <JFXTextField fx:id="filaColumnas" prefHeight="25.0" prefWidth="334.0" HBox.hgrow="ALWAYS">
+                     <HBox.margin>
+                        <Insets bottom="2.5" left="2.5" right="2.5" top="2.5" />
+                     </HBox.margin>
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </JFXTextField>
+               </children>
+               <VBox.margin>
+                  <Insets bottom="2.5" left="2.5" right="2.5" top="2.5" />
+               </VBox.margin>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="116.0" prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Label prefHeight="21.0" prefWidth="209.0" text="Fila de Bloqueos" HBox.hgrow="ALWAYS">
+                     <HBox.margin>
+                        <Insets bottom="2.5" left="2.5" right="2.5" top="2.5" />
+                     </HBox.margin>
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Label>
+                  <ImageView fx:id="ToolTipBloqueos" fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true" HBox.hgrow="ALWAYS">
+                     <image>
+                        <Image url="@../../recursos/img/iC32.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets bottom="2.5" left="2.5" right="2.5" top="2.5" />
+                     </HBox.margin>
+                  </ImageView>
+                  <JFXTextField fx:id="filaBloqueos" prefHeight="25.0" prefWidth="334.0" HBox.hgrow="ALWAYS">
+                     <HBox.margin>
+                        <Insets bottom="2.5" left="2.5" right="2.5" top="2.5" />
+                     </HBox.margin>
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </JFXTextField>
+               </children>
+               <VBox.margin>
+                  <Insets bottom="2.5" left="2.5" right="2.5" top="2.5" />
+               </VBox.margin>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" layoutX="13.0" layoutY="13.0" prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Label prefHeight="21.0" prefWidth="209.0" text="Fila de Datos" HBox.hgrow="ALWAYS">
+                     <HBox.margin>
+                        <Insets bottom="2.5" left="2.5" right="2.5" top="2.5" />
+                     </HBox.margin>
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Label>
+                  <ImageView fx:id="ToolTipFilaDatos" fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true" HBox.hgrow="ALWAYS">
+                     <image>
+                        <Image url="@../../recursos/img/iC32.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets bottom="2.5" left="2.5" right="2.5" top="2.5" />
+                     </HBox.margin>
+                  </ImageView>
+                  <JFXTextField fx:id="filaDatos" prefHeight="25.0" prefWidth="334.0" HBox.hgrow="ALWAYS">
+                     <HBox.margin>
+                        <Insets bottom="2.5" left="2.5" right="2.5" top="2.5" />
+                     </HBox.margin>
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </JFXTextField>
+               </children>
+               <VBox.margin>
+                  <Insets bottom="2.5" left="2.5" right="2.5" top="2.5" />
+               </VBox.margin>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Label prefHeight="21.0" prefWidth="209.0" text="Columna de Datos" HBox.hgrow="ALWAYS">
+                     <HBox.margin>
+                        <Insets bottom="2.5" left="2.5" right="2.5" top="2.5" />
+                     </HBox.margin>
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Label>
+                  <ImageView fx:id="ToolTipColumnaDatos" fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true" HBox.hgrow="ALWAYS">
+                     <image>
+                        <Image url="@../../recursos/img/iC32.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets bottom="2.5" left="2.5" right="2.5" top="2.5" />
+                     </HBox.margin>
+                  </ImageView>
+                  <JFXTextField fx:id="columnaDatos" prefHeight="25.0" prefWidth="334.0" HBox.hgrow="ALWAYS">
+                     <HBox.margin>
+                        <Insets bottom="2.5" left="2.5" right="2.5" top="2.5" />
+                     </HBox.margin>
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </JFXTextField>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="116.0" prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Label prefHeight="21.0" prefWidth="192.0" text="Primary Key" HBox.hgrow="ALWAYS">
+                     <HBox.margin>
+                        <Insets bottom="2.5" left="2.5" right="2.5" top="2.5" />
+                     </HBox.margin>
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Label>
+                  <ImageView fx:id="ToolTipPK" fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true" HBox.hgrow="ALWAYS">
+                     <image>
+                        <Image url="@../../recursos/img/iC32.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets bottom="2.5" left="2.5" right="2.5" top="2.5" />
+                     </HBox.margin>
+                  </ImageView>
+                  <JFXComboBox fx:id="comboColumnPK" prefWidth="150.0">
+                     <HBox.margin>
+                        <Insets bottom="2.5" left="2.5" right="2.5" top="2.5" />
+                     </HBox.margin>
+                  </JFXComboBox>
+                  <JFXButton fx:id="addColumnPK" buttonType="RAISED" contentDisplay="GRAPHIC_ONLY" onMouseClicked="#agnadirColumnPK" prefHeight="40.0" prefWidth="40.0" style="-fx-border-color: #000000; -fx-border-radius: 5; -fx-background-radius: 5;">
+                     <graphic>
+                        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../recursos/img/addC32.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <HBox.margin>
+                        <Insets bottom="2.5" left="2.5" right="2.5" top="2.5" />
+                     </HBox.margin>
+                  </JFXButton>
+                  <JFXButton contentDisplay="GRAPHIC_ONLY" prefHeight="40.0" prefWidth="40.0" visible="false">
+                     <graphic>
+                        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true" />
+                     </graphic>
+                     <HBox.margin>
+                        <Insets bottom="2.5" left="2.5" right="2.5" top="2.5" />
+                     </HBox.margin>
+                  </JFXButton>
+                  <JFXButton fx:id="delColumnPK" buttonType="RAISED" contentDisplay="GRAPHIC_ONLY" onMouseClicked="#borrarColumnPK" prefHeight="40.0" prefWidth="40.0" style="-fx-border-color: #000000; -fx-border-radius: 5; -fx-background-radius: 5;">
+                     <graphic>
+                        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../recursos/img/thrasC32.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <HBox.margin>
+                        <Insets bottom="2.5" left="2.5" right="2.5" top="2.5" />
+                     </HBox.margin>
+                  </JFXButton>
+               </children>
+               <VBox.margin>
+                  <Insets bottom="2.5" left="2.5" right="2.5" top="2.5" />
+               </VBox.margin>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="216.0" prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Label prefHeight="21.0" prefWidth="192.0" text="Acciones de la Tabla" HBox.hgrow="ALWAYS">
+                     <HBox.margin>
+                        <Insets bottom="2.5" left="2.5" right="2.5" top="2.5" />
+                     </HBox.margin>
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Label>
+                  <ImageView fx:id="ToolTipAccionesTablas" fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true" HBox.hgrow="ALWAYS">
+                     <image>
+                        <Image url="@../../recursos/img/iC32.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets bottom="2.5" left="2.5" right="2.5" top="2.5" />
+                     </HBox.margin>
+                  </ImageView>
+               </children>
+               <VBox.margin>
+                  <Insets bottom="2.5" left="2.5" right="2.5" top="2.5" />
+               </VBox.margin>
+            </HBox>
+            <HBox alignment="CENTER" layoutX="10.0" layoutY="316.0" prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <JFXCheckBox fx:id="insertCheck" prefWidth="100.0" text="Insert" HBox.hgrow="ALWAYS">
+                     <HBox.margin>
+                        <Insets bottom="2.5" left="2.5" right="2.5" top="2.5" />
+                     </HBox.margin>
+                  </JFXCheckBox>
+                  <JFXCheckBox fx:id="updateCheck" prefWidth="100.0" text="Update" HBox.hgrow="ALWAYS">
+                     <HBox.margin>
+                        <Insets bottom="2.5" left="2.5" right="2.5" top="2.5" />
+                     </HBox.margin>
+                  </JFXCheckBox>
+                  <JFXCheckBox fx:id="delteCheck" prefWidth="100.0" text="Delete" HBox.hgrow="ALWAYS">
+                     <HBox.margin>
+                        <Insets bottom="2.5" left="2.5" right="2.5" top="2.5" />
+                     </HBox.margin>
+                  </JFXCheckBox>
+               </children>
+               <VBox.margin>
+                  <Insets bottom="2.5" left="2.5" right="2.5" top="2.5" />
+               </VBox.margin>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="380.0" prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Label prefHeight="21.0" prefWidth="192.0" text="Columnas Binarias" HBox.hgrow="ALWAYS">
+                     <HBox.margin>
+                        <Insets bottom="2.5" left="2.5" right="2.5" top="2.5" />
+                     </HBox.margin>
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Label>
+                  <ImageView fx:id="ToolTipBinarias" fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true" HBox.hgrow="ALWAYS">
+                     <image>
+                        <Image url="@../../recursos/img/iC32.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets bottom="2.5" left="2.5" right="2.5" top="2.5" />
+                     </HBox.margin>
+                  </ImageView>
+                  <JFXComboBox fx:id="comboColumnBin" prefWidth="150.0">
+                     <HBox.margin>
+                        <Insets bottom="2.5" left="2.5" right="2.5" top="2.5" />
+                     </HBox.margin></JFXComboBox>
+                  <JFXButton fx:id="addColumnBin" buttonType="RAISED" contentDisplay="GRAPHIC_ONLY" onMouseClicked="#agnadirColumnBin" prefHeight="40.0" prefWidth="40.0" style="-fx-border-color: #000000; -fx-border-radius: 5; -fx-background-radius: 5;">
+                     <HBox.margin>
+                        <Insets bottom="2.5" left="2.5" right="2.5" top="2.5" />
+                     </HBox.margin>
+                     <graphic>
+                        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../recursos/img/addC32.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton contentDisplay="GRAPHIC_ONLY" layoutX="414.0" layoutY="20.0" prefHeight="40.0" prefWidth="40.0" visible="false" HBox.hgrow="ALWAYS">
+                     <graphic>
+                        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true" />
+                     </graphic>
+                     <HBox.margin>
+                        <Insets bottom="2.5" left="2.5" right="2.5" top="2.5" />
+                     </HBox.margin>
+                  </JFXButton>
+                  <JFXButton fx:id="delColumnBin" buttonType="RAISED" contentDisplay="GRAPHIC_ONLY" layoutX="465.0" layoutY="20.0" onMouseClicked="#borrarColumnBin" prefHeight="40.0" prefWidth="40.0" style="-fx-border-color: #000000; -fx-border-radius: 5; -fx-background-radius: 5;" HBox.hgrow="ALWAYS">
+                     <graphic>
+                        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../recursos/img/thrasC32.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <HBox.margin>
+                        <Insets bottom="2.5" left="2.5" right="2.5" top="2.5" />
+                     </HBox.margin>
+                  </JFXButton>
+               </children>
+               <VBox.margin>
+                  <Insets bottom="2.5" left="2.5" right="2.5" top="2.5" />
+               </VBox.margin>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="471.0" prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Label prefHeight="21.0" prefWidth="192.0" text="columnas Simplificadas" HBox.hgrow="ALWAYS">
+                     <HBox.margin>
+                        <Insets bottom="2.5" left="2.5" right="2.5" top="2.5" />
+                     </HBox.margin>
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Label>
+                  <ImageView fx:id="ToolTipSimplificadas" fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true" HBox.hgrow="ALWAYS">
+                     <image>
+                        <Image url="@../../recursos/img/iC32.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets bottom="2.5" left="2.5" right="2.5" top="2.5" />
+                     </HBox.margin>
+                  </ImageView>
+                  <JFXComboBox fx:id="ComboSimpli" prefWidth="150.0">
+                     <HBox.margin>
+                        <Insets bottom="2.5" left="2.5" right="2.5" top="2.5" />
+                     </HBox.margin></JFXComboBox>
+                  <JFXButton fx:id="addColumnSimp" buttonType="RAISED" contentDisplay="GRAPHIC_ONLY" onMouseClicked="#agnadirColumnSimp" prefHeight="40.0" prefWidth="40.0" style="-fx-border-color: #000000; -fx-border-radius: 5; -fx-background-radius: 5;">
+                     <graphic>
+                        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../recursos/img/addC32.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <HBox.margin>
+                        <Insets bottom="2.5" left="2.5" right="2.5" top="2.5" />
+                     </HBox.margin>
+                  </JFXButton>
+                  <JFXButton fx:id="editColumnSimp" buttonType="RAISED" contentDisplay="GRAPHIC_ONLY" onMouseClicked="#editColumnSimp" prefHeight="40.0" prefWidth="40.0" style="-fx-border-color: #000000; -fx-border-radius: 5; -fx-background-radius: 5;">
+                     <graphic>
+                        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../recursos/img/editC32.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <HBox.margin>
+                        <Insets bottom="2.5" left="2.5" right="2.5" top="2.5" />
+                     </HBox.margin>
+                  </JFXButton>
+                  <JFXButton fx:id="delColumnSimp" buttonType="RAISED" contentDisplay="GRAPHIC_ONLY" onMouseClicked="#borrarColumnSimp" prefHeight="40.0" prefWidth="40.0" style="-fx-border-color: #000000; -fx-border-radius: 5; -fx-background-radius: 5;">
+                     <graphic>
+                        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../recursos/img/thrasC32.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <HBox.margin>
+                        <Insets bottom="2.5" left="2.5" right="2.5" top="2.5" />
+                     </HBox.margin>
+                  </JFXButton>
+               </children>
+               <VBox.margin>
+                  <Insets bottom="2.5" left="2.5" right="2.5" top="2.5" />
+               </VBox.margin>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="563.0" prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Label prefHeight="21.0" prefWidth="192.0" text="Columnas Parametrizadas" HBox.hgrow="ALWAYS">
+                     <HBox.margin>
+                        <Insets bottom="2.5" left="2.5" right="2.5" top="2.5" />
+                     </HBox.margin>
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Label>
+                  <ImageView fx:id="ToolTipParametrizadas" fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true" HBox.hgrow="ALWAYS">
+                     <image>
+                        <Image url="@../../recursos/img/iC32.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets bottom="2.5" left="2.5" right="2.5" top="2.5" />
+                     </HBox.margin>
+                  </ImageView>
+                  <JFXComboBox fx:id="ComboParam" prefWidth="150.0">
+                     <HBox.margin>
+                        <Insets bottom="2.5" left="2.5" right="2.5" top="2.5" />
+                     </HBox.margin></JFXComboBox>
+                  <JFXButton fx:id="addColumnParm" buttonType="RAISED" contentDisplay="GRAPHIC_ONLY" onMouseClicked="#agnadirColumnParm" prefHeight="40.0" prefWidth="40.0" style="-fx-border-color: #000000; -fx-border-radius: 5; -fx-background-radius: 5;">
+                     <graphic>
+                        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../recursos/img/addC32.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <HBox.margin>
+                        <Insets bottom="2.5" left="2.5" right="2.5" top="2.5" />
+                     </HBox.margin>
+                  </JFXButton>
+                  <JFXButton fx:id="editColumnaParm" buttonType="RAISED" contentDisplay="GRAPHIC_ONLY" onMouseClicked="#editarColumnParm" prefHeight="40.0" prefWidth="40.0" style="-fx-border-color: #000000; -fx-border-radius: 5; -fx-background-radius: 5;">
+                     <graphic>
+                        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../recursos/img/editC32.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <HBox.margin>
+                        <Insets bottom="2.5" left="2.5" right="2.5" top="2.5" />
+                     </HBox.margin>
+                  </JFXButton>
+                  <JFXButton fx:id="delColumnParm" buttonType="RAISED" contentDisplay="GRAPHIC_ONLY" onMouseClicked="#borrarColumnParm" prefHeight="40.0" prefWidth="40.0" style="-fx-border-color: #000000; -fx-border-radius: 5; -fx-background-radius: 5;">
+                     <graphic>
+                        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../recursos/img/thrasC32.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <HBox.margin>
+                        <Insets bottom="2.5" left="2.5" right="2.5" top="2.5" />
+                     </HBox.margin>
+                  </JFXButton>
+               </children>
+               <VBox.margin>
+                  <Insets bottom="2.5" left="2.5" right="2.5" top="2.5" />
+               </VBox.margin>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="655.0" prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Label prefHeight="21.0" prefWidth="192.0" text="Traduccion Columnas" HBox.hgrow="ALWAYS">
+                     <HBox.margin>
+                        <Insets bottom="2.5" left="2.5" right="2.5" top="2.5" />
+                     </HBox.margin>
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Label>
+                  <ImageView fx:id="ToolTipTraColumn" fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true" HBox.hgrow="ALWAYS">
+                     <image>
+                        <Image url="@../../recursos/img/iC32.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets bottom="2.5" left="2.5" right="2.5" top="2.5" />
+                     </HBox.margin>
+                  </ImageView>
+                  <JFXComboBox fx:id="ComboTraducc" prefHeight="25.0" prefWidth="150.0">
+                     <HBox.margin>
+                        <Insets bottom="2.5" left="2.5" right="2.5" top="2.5" />
+                     </HBox.margin></JFXComboBox>
+                  <JFXButton fx:id="addTradColumn" buttonType="RAISED" contentDisplay="GRAPHIC_ONLY" onMouseClicked="#agnadirTradColumn" prefHeight="40.0" prefWidth="40.0" style="-fx-border-color: #000000; -fx-border-radius: 5; -fx-background-radius: 5;">
+                     <graphic>
+                        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../recursos/img/addC32.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <HBox.margin>
+                        <Insets bottom="2.5" left="2.5" right="2.5" top="2.5" />
+                     </HBox.margin>
+                  </JFXButton>
+                  <JFXButton fx:id="editTradColumn" buttonType="RAISED" contentDisplay="GRAPHIC_ONLY" onMouseClicked="#editarTradColumn" prefHeight="40.0" prefWidth="40.0" style="-fx-border-color: #000000; -fx-border-radius: 5; -fx-background-radius: 5;">
+                     <graphic>
+                        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../recursos/img/editC32.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <HBox.margin>
+                        <Insets bottom="2.5" left="2.5" right="2.5" top="2.5" />
+                     </HBox.margin>
+                  </JFXButton>
+                  <JFXButton fx:id="delTradColumn" buttonType="RAISED" contentDisplay="GRAPHIC_ONLY" onMouseClicked="#borrarTradColumn" prefHeight="40.0" prefWidth="40.0" style="-fx-border-color: #000000; -fx-border-radius: 5; -fx-background-radius: 5;">
+                     <graphic>
+                        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../recursos/img/thrasC32.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <HBox.margin>
+                        <Insets bottom="2.5" left="2.5" right="2.5" top="2.5" />
+                     </HBox.margin>
+                  </JFXButton>
+               </children>
+               <VBox.margin>
+                  <Insets bottom="2.5" left="2.5" right="2.5" top="2.5" />
+               </VBox.margin>
+            </HBox>
+            <HBox alignment="CENTER_RIGHT" layoutX="13.0" layoutY="13.0" prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <JFXButton fx:id="guardar" buttonType="RAISED" contentDisplay="GRAPHIC_ONLY" onMouseClicked="#guardar" prefHeight="40.0" prefWidth="40.0" style="-fx-border-color: #000000; -fx-border-radius: 5; -fx-background-radius: 5;">
+                     <graphic>
+                        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../recursos/img/saveC32.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <HBox.margin>
+                        <Insets bottom="2.5" left="2.5" right="2.5" top="2.5" />
+                     </HBox.margin>
+                  </JFXButton>
+                  <JFXButton fx:id="reset" buttonType="RAISED" contentDisplay="GRAPHIC_ONLY" layoutX="262.0" layoutY="20.0" onMouseClicked="#reset" prefHeight="40.0" prefWidth="40.0" style="-fx-border-color: #000000; -fx-border-radius: 5; -fx-background-radius: 5;">
+                     <graphic>
+                        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../recursos/img/resetC32.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <HBox.margin>
+                        <Insets bottom="2.5" left="2.5" right="2.5" top="2.5" />
+                     </HBox.margin>
+                  </JFXButton>
+                  <JFXButton fx:id="cancelar" buttonType="RAISED" contentDisplay="GRAPHIC_ONLY" onMouseClicked="#cancelar" prefHeight="40.0" prefWidth="40.0" style="-fx-border-color: #000000; -fx-border-radius: 5; -fx-background-radius: 5;">
+                     <graphic>
+                        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../recursos/img/cancelC32.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <HBox.margin>
+                        <Insets bottom="2.5" left="2.5" right="8.0" top="2.5" />
+                     </HBox.margin>
+                  </JFXButton>
+               </children>
+               <VBox.margin>
+                  <Insets bottom="2.5" left="2.5" right="2.5" top="2.5" />
+               </VBox.margin>
+            </HBox>
+         </children>
+      </VBox>
+   </center>
+</BorderPane>
