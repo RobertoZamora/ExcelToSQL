@@ -1,6 +1,9 @@
 package application.BBDD;
 
 public class DBQuery {
+	public static final String SQL_CONFIGURACION =
+			" SELECT ID, DES_CONFIGURACION FROM CONFIGURACIONES WHERE DES_CONFIGURACION = ? ";
+			
 	public static final String SQL_CONFIGURACIONES =
 			" SELECT ID, DES_CONFIGURACION FROM CONFIGURACIONES ";
 	

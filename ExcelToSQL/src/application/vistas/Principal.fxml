@@ -46,6 +46,37 @@
                      </graphic>
                   </JFXButton>
                </children></HBox>
+            <HBox alignment="CENTER_RIGHT" layoutX="10.0" layoutY="56.0" prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <JFXButton fx:id="descargarConfiguracion" buttonType="RAISED" contentDisplay="GRAPHIC_ONLY" onMouseClicked="#descargarConfiguracion" prefHeight="40.0" prefWidth="40.0" style="-fx-border-color: #000000; -fx-border-radius: 5; -fx-background-radius: 5;">
+                     <graphic>
+                        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../recursos/img/downloadC32.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <HBox.margin>
+                        <Insets bottom="2.5" left="2.5" right="2.5" />
+                     </HBox.margin>
+                  </JFXButton>
+                  <JFXButton fx:id="cargarConfiguracion" buttonType="RAISED" contentDisplay="GRAPHIC_ONLY" onMouseClicked="#cargarConfiguracion" prefHeight="40.0" prefWidth="40.0" style="-fx-border-color: #000000; -fx-border-radius: 5; -fx-background-radius: 5;">
+                     <graphic>
+                        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../recursos/img/uploadC32.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <HBox.margin>
+                        <Insets bottom="2.5" left="2.5" right="1.0" />
+                     </HBox.margin>
+                  </JFXButton>
+               </children>
+               <padding>
+                  <Insets bottom="2.5" left="2.5" right="2.5" top="2.5" />
+               </padding>
+            </HBox>
             <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
                <children>
                   <JFXTextField fx:id="archivoExcel" disable="true" prefHeight="25.0" prefWidth="360.0" />

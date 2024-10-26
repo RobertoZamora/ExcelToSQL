@@ -11,6 +11,8 @@ import application.constantes.Constantes;
 import application.modelo.ConfigColores;
 import application.modelo.Configuracion;
 import application.trazas.Trazas;
+import application.util.ConfiguracionJsonCreator;
+import application.util.FicheroBackUp;
 import application.util.LeerFicherosExcel;
 
 import java.io.File;
@@ -64,6 +66,12 @@ public class PrincipalController
 
     @FXML
     private JFXButton ejecutar;
+
+    @FXML
+    private JFXButton descargarConfiguracion;
+
+    @FXML
+    private JFXButton cargarConfiguracion;
 
     @FXML
     void abrirConfiguracion(MouseEvent event) {
@@ -353,6 +361,7 @@ public class PrincipalController
 		conn.eliminarDato(Constantes.PARAMETRIZADAS, param);
 		conn.eliminarDato(Constantes.TRADUCCIONES, param);
 		conn.eliminarDato(Constantes.T_ACCIONES, param);
+		conn.eliminarDato(Constantes.CAMPOSTIPO, param);
     	conn.desconectar(); 
     }
 
@@ -424,6 +433,14 @@ public class PrincipalController
     	configurar.setTooltip(tooltipConfigurar);
     	ejecutar.setTooltip(tooltipEjecutar);
     	
+    	cargarConfiguraciones();
+    }
+    
+    private void cargarConfiguraciones()
+    {
+    	// Limpiar los items actuales del ComboBox
+    	comboConfig.getItems().clear();
+    	
     	ConexionBBDD conn = new ConexionBBDD(log);
     	conn.conectar();
     	ArrayList<Configuracion> configuraciones = new ArrayList<Configuracion>();
@@ -433,7 +450,41 @@ public class PrincipalController
     	comboConfig.setValue(configuraciones.get(0));
     	conn.desconectar();
     	
-    	
+    }
 
+    @FXML
+    void cargarConfiguracion(MouseEvent event) {
+    	FicheroBackUp ficheroBackup = new FicheroBackUp(log);
+		ConfiguracionJsonCreator backup = new ConfiguracionJsonCreator(log);
+		File fJson = ficheroBackup.seleccionarArchivoBackUp((Stage) descargarConfiguracion.getScene().getWindow());
+		backup.leerJsonEInsertarEnBBDD(fJson);
+		
+		cargarConfiguraciones();
+    }
+
+    @FXML
+    void descargarConfiguracion(MouseEvent event) {
+    	int selectedIndex = comboConfig.getSelectionModel().getSelectedIndex();
+    	
+    	if(selectedIndex == 0 )
+		{
+    		Alert alert = new Alert(Alert.AlertType.INFORMATION);
+            alert.setHeaderText(null);
+            alert.setTitle("Aviso");
+            alert.setContentText("Debe seleccionar una configuracion valida");
+            // Agregar el icono personalizado
+            Stage stage = (Stage) alert.getDialogPane().getScene().getWindow();
+            stage.getIcons().add(new Image(Main.class.getResourceAsStream("/recursos/img/SQL.png")));
+            alert.showAndWait();
+		}
+    	else
+    	{
+    		String nombre = comboConfig.getValue().getDES_CONFIGURACION();
+    		FicheroBackUp escritor = new FicheroBackUp(log);
+    		File fileJson = escritor.seleccionarCarpeta((Stage) descargarConfiguracion.getScene().getWindow(), nombre);
+    		Configuracion seleccionado = comboConfig.getValue();
+    		ConfiguracionJsonCreator backup = new ConfiguracionJsonCreator(seleccionado.getID(), seleccionado.getDES_CONFIGURACION(), log);
+    		backup.generarJson(fileJson);
+    	}
     }
 }
