@@ -457,9 +457,11 @@ public class PrincipalController
     	FicheroBackUp ficheroBackup = new FicheroBackUp(log);
 		ConfiguracionJsonCreator backup = new ConfiguracionJsonCreator(log);
 		File fJson = ficheroBackup.seleccionarArchivoBackUp((Stage) descargarConfiguracion.getScene().getWindow());
-		backup.leerJsonEInsertarEnBBDD(fJson);
-		
-		cargarConfiguraciones();
+		if(fJson != null) {
+			backup.leerJsonEInsertarEnBBDD(fJson);
+			
+			cargarConfiguraciones();
+		}
     }
 
     @FXML

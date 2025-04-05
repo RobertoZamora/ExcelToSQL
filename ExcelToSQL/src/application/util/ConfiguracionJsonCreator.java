@@ -82,6 +82,12 @@ public class ConfiguracionJsonCreator
 		application.modelo.Configuracion configuracion = conn.recuperarDato(DBQuery.SQL_CONFIGURACION, param, application.modelo.Configuracion.class);
     	System.out.println(configuracion);
 
+    	if (configuracion == null)
+    	{
+    		configuracion = new application.modelo.Configuracion(config.getId(),config.getDES_CONFIGURACION());
+    	} else {
+    		conn.borrarConfiguracion(String.valueOf(config.getId()));
+    	}
     	
     	int id = conn.contarRegistros(Constantes.TABLA_CONFIGURACION) + 1;
 		configuracion.setID(id);

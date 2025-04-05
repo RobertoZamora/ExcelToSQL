@@ -18,6 +18,8 @@ import java.util.ArrayList;
 import org.apache.log4j.Level;
 
 import application.Main;
+import application.constantes.Constantes;
+import application.modelo.Configuracion;
 import application.trazas.Trazas;
 
 import javafx.application.Platform;
@@ -506,6 +508,29 @@ public class ConexionBBDD {
 	        }
 	    }
 	}
+	
+	public void borrarConfiguracion(String idConfig)
+    {    	
+    	ArrayList<String[]> param = new ArrayList<String[]>();
+		String[] auxParam = new String[3];
+		auxParam[0] = "ID";
+		auxParam[1] = Constantes.getSqlTipo(Constantes.SQL_INT);
+		auxParam[2] = idConfig;
+		param.add(auxParam);
+		
+		eliminarDato(Constantes.TABLA_CONFIGURACION, param);
+		
+		param.get(0)[0] = "ID_CONFIG";
+		
+		eliminarDato(Constantes.CONFIG_COLORES, param);
+		eliminarDato(Constantes.TABLAS, param);
+		eliminarDato(Constantes.BINARIAS, param);
+		eliminarDato(Constantes.SIMPLIFICADAS, param);
+		eliminarDato(Constantes.PARAMETRIZADAS, param);
+		eliminarDato(Constantes.TRADUCCIONES, param);
+		eliminarDato(Constantes.T_ACCIONES, param);
+		eliminarDato(Constantes.CAMPOSTIPO, param);
+    }
 	
 	public PreparedStatement prepareStatement(String sentencia) throws SQLException
 	{
